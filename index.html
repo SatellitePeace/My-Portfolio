@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
+    <title>Nneoma's Portfolio</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">njoku <i class="bi bi-emoji-sunglasses"></i></a>
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="bi bi-cloud-sun" id="lightMode-icon"></div>
+      <div class="bi bi-list" id="menu-icon"></div>
+    </header>
+    <!-- Home section markup -->
+    <section class="home" id="home">
+        <article class="home-content">
+            <h2>'Ndewo', it's me</h1>
+                <h1>Nneoma Njoku
+            </h2>
+            <h2>And i'm a <span class="multiple-text"></span></h2>
+            <p> 
+                My passion lies in helping to create enduring value and building high-value, user-centric, and value-oriented products that stand the test of time.
+            </p>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/nneoma-njoku-34b098231/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.frontendmentor.io/profile/SatellitePeace" target="_blank"><i class="bi bi-regex"></i></a>
+                <a href="https://github.com/SatellitePeace" target="_blank"><i class="bi bi-github"></i></a>
+            </div>
+            <a href="./assets/Nneoma Njoku__CV.pdf" download class="btn">Download CV</a>
+        </article>
+        <figure class="home-img">
+            <img src="./assets/images/Hero.png" alt="Nneoma's Header Image" />
+        </figure>
+    </section>
+    <!-- About Section Markup -->
+    <section class="about" id="about">
+        <figure class="about-img">
+            <img src="./assets/images/me.jpg" alt="Nneoma image">
+        </figure>
+        <article class="about-content">
+            <h2 class="heading">
+                About <span>Me</span>
+                <h3>Tech Value Enthusiast</h3>
+                <p>As a dedicated product manager and frontend enthusiast, I bring a versatile skill set and a commitment to value creation and continuous learning. I am poised to enhance your product's success through proven product management expertise and a solid foundation in technical skills. Eager to contribute insights and foster the diverse growth of your product's</p>
+                <a href="#home" class="btn">Hire Me</a>
+            </h2>
+        </article>
+    </section>
+    <!-- SERVICES SECTION MARKUP -->
+    <section class="services" id="services">
+        <h2 class="heading">What <span>I Do</span></h2>
+        <div class="services-container">
+            <!-- single service -->
+            <article class="service-box">
+                <i class="bi bi-kanban"></i>
+                <h3>Product Management</h3>
+                <p>I am dedicated to advancing product processes by actively shaping innovative solutions and strategies.</p>
+            </article>
+            <!-- single service -->
+            <article class="service-box">
+                <i class="bi bi-code-slash"></i>
+                <h3>Front-end Development</h3>
+                <p>Proficient in web technologies: HTML, CSS, SCSS, Bootsrap, Git, with ongoing learning in JavaScript and React. </p>
+            </article>
+            <!-- single service -->
+            <article class="service-box">
+                <i class="bi bi-pencil-square"></i>
+                <h3>Content Writing</h3>
+                <p>With a portfolio boasting 600+ published articles and 10 more in the pipeline across diverse topics, I am confident in delivering content tailored to your needs.</p>
+            </article>
+        </div>
+    </section>
+    <!-- PORTFOLIO SECTION -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">
+            My <span>Projects</span>
+        </h2>
+        <p>Explore my works. Contact me for more</p>
+        <ul>
+            <li class="list active" data-filter="all">All</li>
+            <li class="list" data-filter="product">Product Management</li>
+            <li class="list" data-filter="frontend">Frontend Projects</li>
+            <li class="list" data-filter="articles">Articles</li>
+        </ul>
+        <!-- Project Gallery -->
+        <div class="product">
+            <div class="itemBox" data-items="product">
+<img src="./assets/images/loan_process-C1wwrHhs.jpg" alt="front page on task manager project">
+<article class="portfolio-layer">
+<h4>Mello Task Manager</h4>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quas tempora placeat iusto repellendus cum.</p>
+<a href="./assets/Mello Task Manager Portfolio Project.pdf" download class="btn"><i class="bi bi-box-arrow-down"></i></a>
+</article>
+            </div>
+            <!-- single product -->
+            <div class="itemBox" data-items="frontend">
+                <img src="./assets/images/automated_laon_repayment-vkdwrHhs.jpg" alt="space tourism site screenshort">
+                <article class="portfolio-layer">
+                    <h4>Space Tourism Site</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quas tempora placeat iusto repellendus cum.</p>
+                    <a href="https://chebakia-space-tourism.netlify.app" class="btn" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+                    </article>
+                            </div>
+                            <!-- single product -->
+                            <div class="itemBox" data-items="articles">
+                                <img src="./assets/images/automated_laon_repayment-vkdwrHhs.jpg" alt="">
+                                <article class="portfolio-layer">
+                                    <h4>Artice Opera 1</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quas tempora placeat iusto repellendus cum.</p>
+                                    <a href="#" class="btn" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+                                    </article>
+                                            </div>
+                                        <!-- single product -->    
+                <div class="itemBox" data-items="product">
+<img src="./assets/images/diff_types_of_loan-AJ0wrHhs.jpg" alt="">
+<article class="portfolio-layer">
+    <h4>Finance Weg Aggrator</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quas tempora placeat iusto repellendus cum.</p>
+    <a href="#" class="btn" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+    </article>
+            </div>
+            <div class="itemBox" data-items="frontend">
+                <img src="./assets/images/loan_process-C1wwrHhs.jpg" alt="tip calculator screenshort">
+                <article class="portfolio-layer">
+                    <h4>React Tip Calculator</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quas tempora placeat iusto repellendus cum.</p>
+                    <a href="https://tipcalulatorreactprac.netlify.app" class="btn" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+                    </article>
+                            </div>
+             <div class="itemBox" data-items="product">
+                       <img src="./assets/images/automated_laon_repayment-vkdwrHhs.jpg" alt="">
+                       <article class="portfolio-layer">
+                        <h4>Hospitality & Travels</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quas tempora placeat iusto repellendus cum.</p>
+                        <a href="#" class="btn" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+                        </article>
+                  </div>                               
+        </div>
+    </section>
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <h2 class="heading">
+            Contact <span>Me!!</span>
+        </h2>
+        <div class="contact-box">
+            <form name="submit-to-google-sheet" class="form">
+                <!-- single input -->
+                <div class="inputbox">
+                    <input type="text" name="Name" required="required">
+                    <label for="name">Full Name</label>
+                    <i></i>
+                </div>
+                <!-- single input -->
+                <div class="inputbox">
+                    <input type="email" name="Email" required="required">
+                    <label for="email">Email</label>
+                    <i></i>
+                </div>
+                 <!-- single input -->
+                 <div class="inputbox">
+                   <textarea  rows="6" name="Message" required="required"></textarea>
+                    <label for="">Message</label>
+                    <i></i>
+                </div>
+                     <!-- single input -->
+        
+              <input type="submit" value="Submit" class="submit btn">
+                
+                <!-- end of single input -->
+                <p id="form-message" >  
+                </p>
+            </form>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-text">
+         <p>Copyright &copy; 2023 by Njoku Nneoma || All Rights Reserved</p>
+        </div>
+    </footer>
+    <!-- SCROLL REVEAL -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Typed Js -->
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Main js -->
+   <script src="./index.js"></script>
+</body>
+
+</html>
