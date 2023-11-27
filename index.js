@@ -87,6 +87,9 @@ lightModeIcon.onclick = () => {
     document.body.classList.toggle("light-mode")
 }
 
+// COPYRIGHT DATE
+const copyDate = document.querySelector("small")
+copyDate.innerText = new Date().getFullYear()
 // SUBMIT FORM TO GOOGLE SHEETS
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbz7mZWJsctvUlMiYi5w4N89063sAozUrc2yqZjNEqrv7MoZAX5moruWHLGHD26N_CXd/exec'

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700&family=Inter:wght@300;500;700&family=Josefin+Sans:wght@400;500;600;700&family=Kumbh+Sans:wght@300;400;700&family=League+Spartan:wght@500;600;700&family=Mulish:wght@400;500;600;700&family=Roboto+Mono:ital,wght@0,400;0,600;1,500;1,600&family=Space+Grotesk:wght@500&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -33,6 +35,22 @@ body {
   color: var(--text-color);
   overflow-x: hidden;
 }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Inter", sans-serif;
+  letter-spacing: 1.5px;
+}
+P {
+  font-family: "Mulish", sans-serif;
+  line-height: 1.5;
+}
+a,
+li {
+  font-family: "Josefin Sans", sans-serif;
+}
 img {
   width: 100%;
 }
@@ -57,7 +75,7 @@ section {
   padding: 10rem 9% 2rem;
 }
 .logo {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   font-weight: 600;
   cursor: default;
   color: var(--text-color);
@@ -71,7 +89,7 @@ section {
 .logo i {
   color: var(--main-color);
   display: block;
-  margin-top: 1rem;
+  margin-top: 0.6rem;
 }
 .navbar a {
   font-size: 1.7rem;
@@ -293,6 +311,10 @@ transform: translateY(0);
   letter-spacing: 1px;
   cursor: pointer;
   font-size: 1.6rem;
+  transition: 0.2s ease-in;
+}
+.portfolio ul li:hover {
+  background-color: var(--main-color);
 }
 .portfolio ul li.active {
   background-color: var(--main-color);
@@ -307,7 +329,7 @@ transform: translateY(0);
 .product .itemBox {
   position: relative;
   display: flex;
-  border-radius: 1.2rem;
+  border-radius: 1rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
@@ -316,8 +338,13 @@ transform: translateY(0);
 }
 .product .itemBox img {
   width: 100%;
+  min-height: 20rem;
+  object-fit: cover;
   transition: 0.5s ease;
 }
+/* .img-blur {
+  filter: blur(1rem);
+} */
 .product .itemBox:hover img {
   transform: scale(1.1);
 }
@@ -329,6 +356,7 @@ transform: translateY(0);
   width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
   color: var(--text-color);
+  color: #eee;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -377,7 +405,8 @@ transform: translateY(0);
   /* min-width: 30rem; */
   width: 100%;
   max-width: 45rem;
-  height: 42rem;
+  height: 100%;
+  height: 45rem;
   background-color: #1c1c1c;
   border-radius: 8px;
   overflow: hidden;
@@ -420,7 +449,7 @@ transform: translateY(0);
   background: var(--bg-color);
   border-radius: 8px;
   z-index: 10;
-  padding: 3rem;
+  padding: 4rem 2rem 2rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -494,13 +523,18 @@ transform: translateY(0);
 }
 .footer {
   margin-top: 3rem;
-  font-size: 1.6rem;
   padding: 3rem;
   background-color: var(--second-color);
 }
 .footer p {
   text-align: center;
   line-height: 2;
+  color: var(--main-color);
+  font-weight: 600;
+  word-spacing: 3px;
+}
+footer > * {
+  font-size: 2rem;
 }
 
 /* RESPONSIVE BREAKPOINTS */
