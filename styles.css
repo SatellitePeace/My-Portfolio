@@ -342,11 +342,11 @@ transform: translateY(0);
   width: 100%;
   min-height: 20rem;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
   transition: 0.5s ease;
 }
 /* .img-blur {
-  filter: blur(1rem);
+  object-fit: contain !important;
 } */
 .product .itemBox:hover img {
   transform: scale(1.1);
@@ -371,6 +371,7 @@ transform: translateY(0);
 }
 .itemBox:hover .portfolio-layer {
   opacity: 1;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .portfolio-layer h4 {
   font-size: 3rem;
@@ -387,11 +388,13 @@ transform: translateY(0);
   width: 5rem;
   background-color: var(--text-color);
   border-radius: 50%;
+  transition: 0.15s ease-in;
 }
 .portfolio-layer i {
   font-size: 2rem;
   color: var(--main-color);
 }
+
 /* CONTACT SECTION STYLES */
 .contact {
   display: flex;
