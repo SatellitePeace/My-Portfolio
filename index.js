@@ -36,7 +36,7 @@ window.onscroll = () => {
 
 // // Type animation 
 const types = new Typed(".multiple-text", {
-    strings: ['Product Manager', "Frontend Developer", "Content Writer"],
+    strings: ['Product Manager', "Frontend Developer", "Product Owner", "Project Manager", "Content Writer"],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
