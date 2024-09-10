@@ -36,7 +36,7 @@ window.onscroll = () => {
 
 // // Type animation 
 const types = new Typed(".multiple-text", {
-    strings: ['Product Manager', "Frontend Developer", "Product Owner", "Project Manager", "Content Writer"],
+    strings: ['Product Manager', "Frontend Developer", "Product Owner", "Project Manager", "Writer"],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
@@ -86,6 +86,37 @@ lightModeIcon.onclick = () => {
     lightModeIcon.classList.toggle("bi-cloud-moon")
     document.body.classList.toggle("light-mode")
 }
+// COPY EMAIL
+document.addEventListener("DOMContentLoaded", () => {
+    const copyButton = document.getElementById("copyButton");
+    const copyTextDiv = document.getElementById("copyText");
+    const copyMessage = document.getElementById("copyMessage");
+
+    // Add click event listener to the button
+    copyButton.addEventListener("click", () => {
+        const textToCopy = copyTextDiv.textContent;
+        // Copy the text to the clipboard
+        navigator.clipboard.writeText(textToCopy)
+            .then(() => {
+                // Show a success message
+                copyMessage.textContent = "Email copied to clipboard!";
+                copyMessage.classList.add("success");
+                copyMessage.classList.remove("error");
+                setTimeout(() => {
+                    copyMessage.textContent = "";
+                }, 2000);
+            })
+            .catch(err => {
+                console.error('Failed to copy email: ', err);
+                copyMessage.textContent = "Failed to copy text!";
+                copyMessage.classList.add("error");
+                copyMessage.classList.remove("success");
+                setTimeout(() => {
+                    copyMessage.textContent = "";
+                }, 2000);
+            });
+    });
+});
 
 // COPYRIGHT DATE
 const copyDate = document.querySelector("small")
