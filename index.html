@@ -5,93 +5,414 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/styles.css" />
-    <!-- favicon -->
+    <!-- FAVICON -->
     <link rel="shortcut icon" href="./assets/images/Hero.png" type="image/x-icon">
-    <!-- Bootstrap Icons-->
+    <!-- BOOSTRAP ICOMS-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
+    <!-- SWIPER JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Nneoma's Portfolio</title>
 </head>
 
 <body>
     <header class="header">
         <strong class="logo">
-            njoku <i class="bi bi-emoji-sunglasses"></i>
+            <a href="#home">Nneoma Njoku</a>
         </strong>
-      <nav class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="bi bi-cloud-sun" id="lightMode-icon"></div>
-      <div class="bi bi-list" id="menu-icon"></div>
+        <nav class="navbar">
+            <!-- <a href="#home" class="active">Home</a> -->
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="bi bi-cloud-sun" id="lightMode-icon"></div>
+        <div class="bi bi-list" id="menu-icon"></div>
     </header>
-    <!-- Home section markup -->
+    <!-- HOME SECTION MARKUP -->
     <section class="home" id="home">
         <article class="home-content">
             <h2>Hello, I am</h1>
                 <h1>Nneoma Njoku
             </h2>
             <h2>and i am a <span class="multiple-text"></span></h2>
-            <p> 
-                My passion lies in helping to create enduring value and building high-value, user-centric, and value-oriented products that stand the test of time.
+            <p>
+                My passion lies in helping to create enduring value and building high-value, user-centric, and
+                value-oriented products that stand the test of time.
             </p>
             <div class="social-media">
-                <a href="https://www.linkedin.com/in/nneoma-njoku-34b098231/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                <a href="https://www.frontendmentor.io/profile/SatellitePeace" target="_blank"><i class="bi bi-regex"></i></a>
+                <a href="https://www.linkedin.com/in/nneoma-njoku-34b098231/" target="_blank"><i
+                        class="bi bi-linkedin"></i></a>
+                <a href="https://www.frontendmentor.io/profile/SatellitePeace" target="_blank"><i
+                        class="bi bi-regex"></i></a>
                 <a href="https://github.com/SatellitePeace" target="_blank"><i class="bi bi-github"></i></a>
             </div>
-            <a href="./assets/docs/Nneoma Njoku__Resume.pdf" download class="btn">Download CV</a>
+            <button class="btn btn-color-2" onclick="window.open('./assets/docs/Nneoma Njoku__Resume.pdf')">
+                Download CV
+            </button>
         </article>
         <figure class="home-img">
             <img src="./assets/images/me 21.jpg" alt="Nneoma's Header Image" />
         </figure>
     </section>
-    <!-- About Section Markup -->
-    <section class="about" id="about">
-        <figure class="about-img">
-            <img src="./assets/images/me.jpg" alt="Nneoma image">
-        </figure>
-        <article class="about-content">
-            <h2 class="heading">
-                About <span>Me</span>
-                <h3>Tech Impact Enthusiast</h3>
-                <p>As a product manager with a passion for tech and a desire for creating impactful products, I am excited to join an organization that shares my vision. My diverse background and technical skills allow me to bring fresh perspectives and innovative solutions to the table. I am eager to collaborate with your team/organization and leverage my expertise to help your product make a real difference in the world.
-</p>
-                <a href="#home" class="btn">Hire Me</a>
-            </h2>
-        </article>
+    <!-- ABOUT SECTION MARKUP -->
+    <section id="about" class="about">
+        <h3 class="subheading">Learn More</h3>
+        <h2 class="heading">About <span>Me</span></h2>
+        <div class="about-body">
+            <figure class="about-img">
+                <img src="./assets/images/me.jpg" alt="Nneoma image">
+            </figure>
+            <article class="about-content">
+                <!-- NEW CONTENT START HERE -->
+                <div class="about-containers">
+                    <div class="details-container">
+                        <i class="bi bi-award-fill"></i>
+                        <h3>Experience</h3>
+                        <p>2+ years <br />In Product & Project</p>
+                    </div>
+                    <div class="details-container">
+                        <i class="bi bi-mortarboard-fill"></i>
+                        <h3>Education</h3>
+                        <p>B.Sc(ED). Bachelors Degree<br />In ED/Political Science</p>
+                    </div>
+                </div>
+                <!-- NEW COONTENT END HERE -->
+                <div class="about-text">
+                    <p>As a product manager with a passion for tech and a desire for
+                        creating impactful products, I am excited to join an organization
+                        that shares my vision.
+                        My diverse background and technical skills allow me to bring
+                        fresh perspectives and innovative solutions to the table.
+                        I am eager to collaborate with your team/organization and
+                        leverage my expertise to help your product make a real difference in the world.</p>
+                    <a href="#contact" class="btn">Contact Me</a>
+                    </h2>
+                </div>
+        </div>
     </section>
-    <!-- SERVICES SECTION MARKUP -->
-    <section class="services" id="services">
-        <h2 class="heading">What <span>I Do</span></h2>
-        <div class="services-container">
-            <!-- single service -->
-            <article class="service-box">
-                <i class="bi bi-list-check"></i>
-                <h3>Product Management</h3>
-                <p>I am dedicated to advancing product processes by actively shaping innovative solutions and strategies.</p>
-            </article>
-            <!-- single service -->
-             <!-- single service -->
-            <article class="service-box">
-                <i class="bi bi-kanban"></i>
-                <h3>Project Management</h3>
-                <p>I manage project lifecycles, create detailed plans, and set milestones to ensure success.</p>
-            </article>
-            <!-- single service -->
-            <article class="service-box">
-                <i class="bi bi-code-slash"></i>
-                <h3>Front-end Development</h3>
-                <p>Proficient in HTML/CSS, and Bootstrap. Possess basic knowledge of Git and GitHub, with ongoing learning in JavaScript. </p>
-            </article>
-            <!-- single service -->
-            <article class="service-box">
-                <i class="bi bi-pencil-square"></i>
-                <h3>Writing</h3>
-                <p>I create technical documentation including User guides, PRDs, FAQs, etc and have published 600+ non-technical articles.</p>
-            </article>
+    <!-- SKILLS SECTION MARKUP -->
+    <section class="skills resume" id="skills">
+        <!-- <h2 class="heading">What <span>I Do</span></h2> -->
+        <h3 class="subheading">My Core</h3>
+        <h2 class="heading">Skills <span>and</span> Strengths</h2>
+        <div class="skills-container">
+            <div class="skills-box">
+                <h2>Why Hire Me?</h2>
+                <p class="skill-description">
+                    I leverage a strong
+                    work ethic to deliver impactful solutions that
+                    exceed customer expectations and drive team success.
+                </p>
+                <div class="skills-btn-container">
+                    <button class="skills-btn active-skill">Achievements</button>
+                    <button class="skills-btn">Skills</button>
+                    <button class="skills-btn">Experience</button>
+                    <button class="skills-btn">Services</button>
+                </div>
+            </div>
+            <div class="skills-box">
+                <!-- Achievement skill -->
+                <div class="skill-detail skill-ability active-skill">
+                    <h2 class="skill-heading">My <span>Achievements</span>
+                    </h2>
+                    <p class="skill-description">Lorem ipsum dolor
+                        sit amet consectetur adipisicing elit.
+                        Deserunt fugiat harum, ut quisquam
+                        accusantium ratione esse sequi eaque
+                        culpa odit.</p>
+                    <div class="skill-list">
+                        <!-- single skill -->
+                        <div class="skill-item">
+                            <h3>Product Manager</h3>
+                            <div class="company">SystemSpecs - Passpoint</div>
+                            <p>Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Animi, minus.
+                                Cumque necessitatibus voluptas quae ab.</p>
+                        </div>
+                        <!-- end single skill -->
+                        <!-- single skill -->
+                        <div class="skill-item">
+                            <h3>Product Owner</h3>
+                            <div class="company">SystemSpecs</div>
+                            <p>Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Animi, minus.
+                                Cumque necessitatibus voluptas quae ab.</p>
+                        </div>
+                        <!-- end single skill -->
+                        <!-- single skill -->
+                        <div class="skill-item">
+                            <h3>Scrum Master</h3>
+                            <div class="company">SystemSpecs</div>
+                            <p>Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Animi, minus.
+                                Cumque necessitatibus voluptas quae ab.</p>
+                        </div>
+                        <!-- end single skill -->
+                        <!-- single skill -->
+                        <div class="skill-item">
+                            <h3>Project Manager </h3>
+                            <div class="company">SystemSpecs - Passpoint</div>
+                            <p>Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Animi, minus.
+                                Cumque necessitatibus voluptas quae ab.</p>
+                        </div>
+                        <!-- end of single skill -->
+                    </div>
+                </div>
+                <!-- end of achievements skill -->
+                <!-- Skills (Skill) -->
+                <div class="skill-detail skill-ability">
+                    <h2 class="skill-heading">My Technical <span>Skills</span>
+                    </h2>
+                    <p class="skill-description">Lorem ipsum dolor
+                        sit amet consectetur adipisicing elit.
+                        Deserunt fugiat harum, ut quisquam
+                        accusantium ratione esse sequi eaque
+                        culpa odit.</p>
+                    <div class="skill-list">
+                        <!-- single skill -->
+                        <div class="skill-item">
+                            <div class="skill-breakdown-content">
+                                <p class="skill-icon">
+                                    <i class="bi bi-send-check-fill"></i>
+                                </p>
+                                <h3>Product Lifecycle Management</h3>
+                                <p>Expertise in managing product
+                                    from ideation to development and launch.</p>
+                            </div>
+                        </div>
+                        <!-- end single skill -->
+                        <!-- single skill -->
+                        <div class="skill-item">
+                            <div class="skill-breakdown-content">
+                                <p class="skill-icon">
+                                    <i class="bi bi-kanban-fill"></i>
+                                </p>
+                                <h3>Agile & Scrum methodologies</h3>
+                                <p>Intermidiate skills in agile workflows
+                                    and use of project management tools. </p>
+                            </div>
+                        </div>
+                        <!-- end single skill -->
+                        <!-- single skill -->
+                        <!-- single skill -->
+                        <div class="skill-item">
+                            <div class="skill-breakdown-content">
+                                <p class="skill-icon">
+                                    <i class="bi bi-sign-intersection-side-fill"></i>
+                                </p>
+                                <h3>Roadmap & Backlog Management</h3>
+                                <p>Developing roadmaps and effectively
+                                    managing and prioritizing feature backlogs.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- end single skill -->
+                        <!-- single skill -->
+                        <div class="skill-item">
+                            <div class="skill-breakdown-content">
+                                <p class="skill-icon">
+                                    <i class="bi bi-graph-up-arrow"></i>
+                                </p>
+                                <h3>Data Analytics & Metrics Tracking</h3>
+                                <p>Tracking metrics, and feedback,
+                                    to make value-driven decisions. Basic
+                                    SQL.</p>
+                            </div>
+                        </div>
+                        <!-- end single skill -->
+                        <!-- single skill -->
+                        <div class="skill-item">
+                            <div class="skill-breakdown-content">
+                                <p class="skill-icon">
+                                    <i class="bi bi-easel2-fill"></i>
+                                </p>
+                                <h3>Design Thinking Fundamentals</h3>
+                                <p>Solid grasp of design principles and
+                                    wireframing with Figma and Balsamiq.</p>
+                            </div>
+                        </div>
+                        <!-- end single skill -->
+                        <!-- single skill -->
+                        <div class="skill-item">
+                            <div class="skill-breakdown-content">
+                                <p class="skill-icon">
+                                    <i class="bi bi-file-pdf"></i>
+                                </p>
+                                <h3>Technical Writing</h3>
+                                <p>Creating PRDs, user stories,
+                                    acceptance criteria, FAQs, and basic API
+                                    documentation.</p>
+                            </div>
+                        </div>
+                        <!-- end single skill -->
+                        <!-- end single skill -->
+                        <!-- single skill -->
+                        <div class="skill-item">
+                            <div class="skill-breakdown-content">
+                                <p class="skill-icon">
+                                    <i class="bi bi-filetype-json"></i>
+                                </p>
+                                <h3>APIs & Integraions</h3>
+                                <p>Understanding RESTful APIs, API specification,
+                                    and basic API testing with Postman.</p>
+                            </div>
+                        </div>
+                        <!-- end single skill -->
+                        <!-- single skill -->
+                        <div class="skill-item">
+                            <div class="skill-breakdown-content">
+                                <p class="skill-icon">
+                                    <i class="bi bi-github"></i>
+                                </p>
+                                <h3>Version Control</h3>
+                                <p>Familiarity with Git/GitHub to
+                                    collaborate with developers and track code changes.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- end single skill -->
+                        <!-- end single skill -->
+                        <!-- single skill -->
+                        <div class="skill-item">
+                            <div class="skill-breakdown-content">
+                                <p class="skill-icon">
+                                    <i class="bi bi-plus-circle-fill"></i>
+                                </p>
+                                <h3>Regulations & Compliance</h3>
+                                <p>Understanding of regulations
+                                    e.g. NDPR and proficiency in
+                                    building compliant products.</p>
+                            </div>
+                        </div>
+                        <!-- end single skill -->
+                        <!-- single skill -->
+                        <div class="skill-item">
+                            <div class="skill-breakdown-content">
+                                <p class="skill-icon">
+                                    <i class="bi bi-file-code-fill"></i>
+                                </p>
+                                <h3>Programming & QA Fundamentals</h3>
+                                <p>Basic skills in HTML/CSS, JavaScript, and QA testing
+                                    to collaborate with devs and troubleshoot issues.</p>
+                            </div>
+                        </div>
+                        <!-- end single skill -->
+                    </div>
+                </div>
+                <!-- end of skills (skill) -->
+                <!-- ////////////// -->
+                <!-- Experince skill -->
+                <div class="skill-detail skill-ability">
+                    <h2 class="skill-heading">My <span>Experience</span>
+                    </h2>
+                    <p class="skill-description">Lorem ipsum dolor
+                        sit amet consectetur adipisicing elit.
+                        Deserunt fugiat harum, ut quisquam
+                        accusantium ratione esse sequi eaque
+                        culpa odit.</p>
+                    <div class="skill-list">
+                        <!-- single skill -->
+                        <div class="skill-item">
+                            <p class="year">
+                                Nov 2023 - Present
+                            </p>
+                            <h3>Product Manager</h3>
+                            <div class="company">SystemSpecs</div>
+                            <p>Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Animi, minus.
+                                Cumque necessitatibus voluptas quae ab.</p>
+                        </div>
+                        <!-- end single skill -->
+                        <!-- single skill -->
+                        <div class="skill-item">
+                            <p class="year">
+                                Jan 2024 - Present
+                            </p>
+                            <h3>Product Owner</h3>
+                            <div class="company">SystemSpecs</div>
+                            <p>Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Animi, minus.
+                                Cumque necessitatibus voluptas quae ab.</p>
+                        </div>
+                        <!-- end single skill -->
+                        <div class="skill-item">
+                            <p class="year">
+                                Nov 2024 - Present
+                            </p>
+                            <h3>Project Manager</h3>
+                            <div class="company">SystemSpecs</div>
+                            <p>Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Animi, minus.
+                                Cumque necessitatibus voluptas quae ab.</p>
+                        </div>
+                        <!-- end single skill -->
+                        <div class="skill-item">
+                            <p class="year">
+                                Aug 2023 - Present
+                            </p>
+                            <h3>Product Manager - Freelance</h3>
+                            <div class="company">Passpoint</div>
+                            <p>Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Animi, minus.
+                                Cumque necessitatibus voluptas quae ab.</p>
+                        </div>
+                        <!-- end single skill -->
+                        <div class="skill-item">
+                            <p class="year">
+                                Jan 2023 - Nov 2023
+                            </p>
+                            <h3>Associate Product Intern </h3>
+                            <div class="company">SystemSpecs</div>
+                            <p>Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Animi, minus.
+                                Cumque necessitatibus voluptas quae ab.</p>
+                        </div>
+                        <!-- end single skill -->
+
+                    </div>
+                </div>
+                <!-- end of experience skill -->
+                <!-- Services skill -->
+                <div class="skill-detail ability">
+                    <h2 class="skill-heading">My <span>Services</span>
+                    </h2>
+                    <p class="skill-description">Whether it is bringing your vision to life or transforming
+                        existing projects into valuable ventures, I can help.
+                        <span>Hire Me</span> for one or more of my services to drive impactful
+                        results.
+                    </p>
+                    <div class="skill-list">
+                        <!-- single service -->
+                        <div class="skill-item">
+                            <p><i class="bi bi-boxes"></i></p>
+                            <h3><span>Product Manager</span></h3>
+                        </div>
+                        <!-- end single service -->
+                        <!-- single service -->
+                        <div class="skill-item">
+                            <p><i class="bi bi-kanban-fill"></i></p>
+                            <h3><span>Product Owner</span></h3>
+                        </div>
+                        <!-- end single sservice -->
+                        <!-- single service -->
+                        <div class="skill-item">
+                            <p><i class="bi bi-trello"></i></p>
+                            <h3><span>Scrum Master</span></h3>
+                        </div>
+                        <!-- end single service -->
+                        <!-- single service -->
+                        <div class="skill-item">
+                            <p><i class="bi bi-list-check"></i></p>
+                            <h3><span>Project Manager</span></h3>
+                        </div>
+                        <!-- end single service -->
+                    </div>
+                </div>
+                <!-- end of services skill -->
+            </div>
         </div>
     </section>
     <!-- PORTFOLIO SECTION -->
@@ -158,66 +479,279 @@
                 <article class="portfolio-layer">
                     <h4>Card Checkout </h4>
                     <p>Click link to visit live site</p>
-                    <a href="https://atm-card-form.netlify.app/" class="btn" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+                    <a href="https://atm-card-form.netlify.app/" class="btn" target="_blank">Visit Site</a>
                     </article>
                             </div>
         </div>
     </section>
+    <!-- TESTIMONIAL SECTION START -->
+    <section id="testimonials" class="testimonials">
+        <article class="testimonial-header">
+            <h3 class="subheading">My Network </h3>
+            <h2 class="heading"><span>Testimonials</span></h2>
+            <p>What my colleagues and other professionals say about me</p>
+        </article>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- single testimonial -->
+                <div class="swiper-slide">
+                    <div class="testimonail-box">
+                        <i class="bi bi-quote"></i>
+                        <div class="testimonial-content">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Ipsa pariatur nisi
+                                magnam mollitia commodi quos aperiam
+                                corporis minima quis officiis!
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Ipsa pariatur nisi
+                                magnam mollitia commodi quos aperiam
+                                corporis minima quis officiis!
+                            </p>
+                            <div class="testimonial-details">
+                                <figure class="testimonial-img">
+                                    <img src="assets/images/me 1.jpg" alt="">
+                                </figure>
+                                <h4 class="name">Osikena Chidinma
+                                    <br><span class="job">Web Market</span>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of single testimonial -->
+                <!-- single testimonial -->
+                <div class="swiper-slide">
+                    <div class="testimonail-box">
+                        <i class="bi bi-quote"></i>
+                        <div class="testimonial-content">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Ipsa pariatur nisi
+                                magnam mollitia commodi quos aperiam
+                                corporis minima quis officiis!
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Ipsa pariatur nisi
+                                magnam mollitia commodi quos aperiam
+                                corporis minima quis officiis!
+                            </p>
+                            <div class="testimonial-details">
+                                <figure class="testimonial-img">
+                                    <img src="assets/images/Nneoma.png" alt="">
+                                </figure>
+                                <h4 class="name">Millicent Igbogi
+                                    <br><span class="job">Prdouct Food</span>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of single testimonial -->
+                <!-- single testimonial -->
+                <div class="swiper-slide">
+                    <div class="testimonail-box">
+                        <i class="bi bi-quote"></i>
+                        <div class="testimonial-content">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Ipsa pariatur nisi
+                                magnam mollitia commodi quos aperiam
+                                corporis minima quis officiis!
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Ipsa pariatur nisi
+                                magnam mollitia commodi quos aperiam
+                                corporis minima quis officiis!
+                            </p>
+                            <div class="testimonial-details">
+                                <figure class="testimonial-img">
+                                    <img src="assets/images/MicrosoftTeams_image__4_-JPUCDShs.png" alt="">
+                                </figure>
+                                <h4 class="name">Spec Champion
+                                    <br><span class="job">Fiananc Money</span>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of single testimonial -->
+                <!-- single testimonial -->
+                <div class="swiper-slide">
+                    <div class="testimonail-box">
+                        <i class="bi bi-quote"></i>
+                        <div class="testimonial-content">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Ipsa pariatur nisi
+                                magnam mollitia commodi quos aperiam
+                                corporis minima quis officiis!
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Ipsa pariatur nisi
+                                magnam mollitia commodi quos aperiam
+                                corporis minima quis officiis!
+                            </p>
+                            <div class="testimonial-details">
+                                <figure class="testimonial-img">
+                                    <img src="assets/images/Hero.png" alt="">
+                                </figure>
+                                <h4 class="name">Njoku Zubby
+                                    <br> <span class="job">Fiananc Money</span>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of single testimonial -->
+                <!-- single testimonial -->
+                <div class="swiper-slide">
+                    <div class="testimonail-box">
+                        <i class="bi bi-quote"></i>
+                        <div class="testimonial-content">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Ipsa pariatur nisi
+                                magnam mollitia commodi quos aperiam
+                                corporis minima quis officiis!
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Ipsa pariatur nisi
+                                magnam mollitia commodi quos aperiam
+                                corporis minima quis officiis!
+                            </p>
+                            <div class="testimonial-details">
+                                <figure class="testimonial-img">
+                                    <img src="assets/images/me.jpg" alt="">
+                                </figure>
+                                <h4 class="name">Technical Nneoma
+                                    <br><span class="job">Prdouct Food</span>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of single testimonial -->
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <!-- TESTIMONIAL SECTION END -->
     <!-- CONTACT SECTION -->
     <section class="contact" id="contact">
         <h2 class="heading">
-            Contact <span>Me!!</span>
+            Let's Work <span>Together</span>
         </h2>
-        <div class="contact-box">
-            <form name="submit-to-google-sheet" class="form">
-                <!-- single input -->
-                <div class="inputbox">
-                    <input type="text" name="Name" required="required" id="name" autocomplete="off">
-                    <label for="name">Full Name</label>
-                    <i></i>
+        <div class="contact-container">
+            <div class="contact-box">
+                <h3>lets work together</h3>
+                <p class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita
+                    deserunt eos mollitia architecto maiores exercitationem
+                    harum saepe per
+                    spiciatis eveniet voluptas! </p>
+                    <!-- Phone contact -->
+                <div class="contact-detail">
+                    <i class="bi bi-phone-fill"></i>
+                    <div class="detail">
+                        <p>Phone</p>
+                        <p>+(234) 08068643267</p>
+                    </div>
                 </div>
-                <!-- single input -->
-                <div class="inputbox">
-                    <input type="email" name="Email" required="required" id="email" autocomplete="off">
-                    <label for="email">Email</label>
-                    <i></i>
+                   <!-- email contact -->
+                   <div class="contact-detail">
+                    <i class="bi bi-envelope-at-fill"></i>
+                    <div class="detail">
+                        <p>Email</p>
+                        <p>Njokunneoma1999@gmail.com</p>
+                    </div>
                 </div>
-                 <!-- single input -->
-                 <div class="inputbox">
-                   <textarea  rows="6" name="Message" required="required" id="msg" autocomplete="off"></textarea>
-                    <label for="">Message</label>
-                    <i></i>
+                <!-- Linkedin contact -->
+                <div class="contact-detail">
+                    <i class="bi bi-linkedin"></i>
+                    <div class="detail">
+                        <p>LinkedIn</p>
+                        <p>https://www.linkedin.com/in/njoku-nneoma/</p>
+                    </div>
                 </div>
-                     <!-- single input -->
-        
-              <input type="submit" value="Submit" class="submit btn">
-                
-                <!-- end of single input -->
-                <p id="form-message" class="form-message">  
-                </p>
-            </form>
-        </div>
-        <div class="e-address mail" id="copyText">
-             <span>Email: </span>
-            <em class="em-email">njokunneoma1999@gmail.com</em> 
-            <span class="bi bi-copy" id="copyButton"></span>
-            <p id="copyMessage"></p>
+                  <!-- Address contact -->
+                  <div class="contact-detail">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <div class="detail">
+                        <p>Location</p>
+                        <p>Lagos, Nigeria (Home)</p>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="contact-box">
+                <form action="">
+                    <h2 class="subheading">
+                        Contact Me
+                    </h2>
+                    <div class="field-box">
+                       <input type="text" placeholder="Full Name" required> 
+                       <input type="email" placeholder=" Email Address" required> 
+                       <input type="text" placeholder="Phone Number" required> 
+                       <input type="text" placeholder="Email Subject" required> 
+                       <textarea name="" id="" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message </button>
+                </form>
+            </div>
         </div>
     </section>
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-text">
-         <p>Copyright &copy; <small></small> by Njoku Nneoma || All Rights Reserved</p>
+            <p>Copyright &copy; <small></small> by Njoku Nneoma || All Rights Reserved</p>
         </div>
     </footer>
     <!-- SCROLL REVEAL -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <!-- Typed Js -->
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
     <!-- Main js -->
-   <script src="./JS/index.js"></script>
+    <script src="./JS/index.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            grabCursor: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 5000,
+            },
+            loop: true,
+            rewind: true,
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 23,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 23,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 23,
+                },
+                1600: {
+                    slidesPerView: 4,
+                    spaceBetween: 25,
+                },
+            },
+        });
+    </script>
 </body>
 
 </html>
