@@ -687,19 +687,19 @@
             <!-- form -->
             <div class="contact-box">
                 <form action="https://formsubmit.co/njokunneoma1999@gmail.com" method="POST"
-                    name="submit-to-google-sheet">
+                    target="_blank">
                     <h2 class="subheading">
                         Contact Me
                     </h2>
                     <div class="field-box">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_next" value="thank-you.html">
-                        <input type="text" placeholder="Full Name" required id="full-name">
-                        <input type="email" placeholder=" Email Address" required id="email">
-                        <input type="text" placeholder="Phone Number" required id="phone">
-                        <input type="text" placeholder="Email Subject" required id="email-subject">
-                        <textarea placeholder="Your Message" required id="form-message"></textarea>
+                        <input type="hidden" name="_next" value="https://portfolio-thank-you-page.netlify.app/">
+                        <input type="text" name="name" placeholder="Full Name" required id="full-name">
+                        <input type="email" name="email" placeholder=" Email Address" required id="email">
+                        <input type="text" name="phone" placeholder="Phone Number" required id="phone">
+                        <input type="text" name="subject" placeholder="Email Subject" required id="email-subject">
+                        <textarea  name="message" placeholder="Your Message" required id="form-message"></textarea>
                         <strong id="err-message"></strong>
                     </div>
                     <button type="submit" class="btn">Send Message </button>

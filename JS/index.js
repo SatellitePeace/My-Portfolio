@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navigator.clipboard
       .writeText(textToCopy)
       .then(() => {
-        copyMessage.textContent = "Email copied to clipboard!";
+        copyMessage.textContent = "Copied to clipboard!";
         copyMessage.classList.add("success");
         copyMessage.classList.remove("error");
         setTimeout(() => {
@@ -154,7 +154,7 @@ document.getElementById("copy-phone").addEventListener("click", () => {
   navigator.clipboard
     .writeText(phoneNumber)
     .then(() => {
-      phoneMessage.textContent = "Phone number copied to clipboard!";
+      phoneMessage.textContent = "Copied to clipboard!";
       phoneMessage.classList.add("success");
       phoneMessage.classList.remove("error");
       setTimeout(() => {
