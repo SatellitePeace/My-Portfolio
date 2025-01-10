@@ -127,7 +127,7 @@ section {
   background-attachment: fixed; */
 }
 .home-content h2 {
-  font-size: 3.2rem;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 .home-content h2:nth-of-type(2) {
@@ -137,7 +137,7 @@ span {
   color: var(--main-color);
 }
 .home-content h1 {
-  font-size: 5.6rem;
+  font-size: 5rem;
   font-weight: 700;
   list-style: 1.3;
 }
@@ -424,7 +424,7 @@ transform: translateY(0);
   letter-spacing: 1px;
   cursor: pointer;
   font-size: 1.6rem;
-  transition: 0.2s ease-in;
+  transition: .5s ease-in-out;
 }
 .portfolio ul li:hover {
   background-color: var(--main-color);
@@ -452,7 +452,16 @@ transform: translateY(0);
 .product .itemBox {
   height: 100%;
   overflow: hidden;
+  animation: SclAnimation .8s ease;
 }
+@keyframes SclAnimation {
+  0%{
+     transform: scale(0);
+  }
+  100%{
+     transform: scale(1);
+  }
+ }
 .product .itemBox img {
   width: 100%;
   height: 60%;
@@ -485,9 +494,9 @@ transform: translateY(0);
 }
 
 /* TESTIMONAILS START */
-/* .testimonial-header{
-  padding-bottom: 5rem;
- } */
+/* .testimonials{
+  background-color: red;
+} */
 .testimonial-header {
   padding-bottom: 5rem;
   font-size: 2rem;
@@ -583,12 +592,13 @@ transform: translateY(0);
 }
 .contact-box .description{
   margin: 1.5rem 0 2.5rem;
+  font-size: 1.6rem;
 }
-.contact-box .contact-detail{
+.contact-detail{
 display: flex;
 align-items: center;
 margin: 1rem 0;
-gap: 1rem;
+gap: 0 1rem;
 }
 .contact-detail i{
 display: inline-flex;
@@ -604,6 +614,26 @@ border-radius: .6rem;
 .contact-detail .detail p:first-child{
 color: var(--main-color);
 }
+.detail p i{
+  color: var(--main-color);
+  font-size: 1.15rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+.detail a {
+ text-decoration: none;
+ color: var(--text-color);
+ font-size: 1.15rem;
+ font-family: "Mulish", sans-serif;
+ line-height: 1.5;
+}
+.success {
+  color: var(--main-color);
+}
+
+.error {
+  color: crimson;
+}
 .contact-box form{
   background-color: var(--bg-color);
   padding: 2.5rem 3.5rem 3.5rem;
@@ -617,6 +647,7 @@ color: var(--main-color);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  margin-top: 3rem;
 }
 .field-box input,
 .field-box textarea{
@@ -626,6 +657,7 @@ color: var(--main-color);
   font-size: 1.6rem;
   color: var(--text-color);
 }
+
 .field-box textarea{
   grid-column: 1/-1;
   height: 26rem;
@@ -640,25 +672,17 @@ color: var(--main-color);
 }
 /* CONTENT END */
 /* FOOTER */
-.footer {
-  margin-top: 3rem;
-  padding: 3rem;
+footer{
   background-color: var(--bg-color);
-}
-.footer-contact {
-  background-color: red;
-  display: flex;
-  gap: 1rem;
-}
-.footer p {
+  padding: 3rem;
   text-align: center;
-  line-height: 2;
-  color: var(--main-color);
-  font-weight: 600;
-  word-spacing: 3px;
+  font-size: 1.8rem;
+  letter-spacing: .1rem;
+  box-shadow: var(--shadow-color);
+  line-height: 2.2rem;
 }
-footer > * {
-  font-size: 2rem;
+footer a{
+  color: var(--main-color);
 }
 
 /* RESPONSIVE BREAKPOINTS */
@@ -781,11 +805,7 @@ footer > * {
     align-items: center;
     justify-content: center;
   }
-  /* .contact-box {
-    position: relative;
-    min-width: 100%;
-    width: 100%;
-  } */
+
   .field-box{
     grid-template-columns: 1fr;
    }

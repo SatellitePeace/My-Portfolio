@@ -40,8 +40,6 @@ const types = new Typed(".multiple-text", {
   strings: [
     "Product Manager",
     "Product Owner",
-    "Project Manager",
-    "Scrum Master",
   ],
   typeSpeed: 100,
   backSpeed: 100,
@@ -120,18 +118,15 @@ lightModeIcon.onclick = () => {
 // CONTACT END
 // COPY EMAIL
 document.addEventListener("DOMContentLoaded", () => {
-  const copyButton = document.getElementById("copyButton");
-  const copyTextDiv = document.getElementById("copyText");
-  const copyMessage = document.getElementById("copyMessage");
+  const copyButton = document.getElementById("copy-email");
+  const copyTextDiv = document.getElementById("email-address");
+  const copyMessage = document.getElementById("email-copy-message");
 
-  // Add click event listener to the button
   copyButton.addEventListener("click", () => {
     const textToCopy = copyTextDiv.textContent;
-    // Copy the text to the clipboard
     navigator.clipboard
       .writeText(textToCopy)
       .then(() => {
-        // Show a success message
         copyMessage.textContent = "Email copied to clipboard!";
         copyMessage.classList.add("success");
         copyMessage.classList.remove("error");
@@ -141,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .catch((err) => {
         console.error("Failed to copy email: ", err);
-        copyMessage.textContent = "Failed to copy text!";
+        copyMessage.textContent = "Failed to copy email!";
         copyMessage.classList.add("error");
         copyMessage.classList.remove("success");
         setTimeout(() => {
@@ -151,35 +146,66 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// COPYRIGHT DATE
-const copyDate = document.querySelector("small");
-copyDate.innerText = new Date().getFullYear();
-// SUBMIT FORM TO GOOGLE SHEETS
+// copy phone number
+document.getElementById("copy-phone").addEventListener("click", () => {
+  const phoneNumber = document.getElementById("phone-number").textContent;
+  const phoneMessage = document.getElementById("phone-copy-message");
 
-const scriptURL =
-  "https://script.google.com/macros/s/AKfycbz7mZWJsctvUlMiYi5w4N89063sAozUrc2yqZjNEqrv7MoZAX5moruWHLGHD26N_CXd/exec";
-const form = document.forms["submit-to-google-sheet"];
-const msg = document.getElementById("form-message");
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  fetch(scriptURL, { method: "POST", body: new FormData(form) })
-    .then((response) => {
-      msg.innerHTML = `<i class="bi bi-check-circle-fill"></i> Message sent successfully!!`;
-      msg.style.color = "green";
-      setTimeout(function () {
-        msg.innerHTML = "";
-      }, 5000);
-      form.reset();
+  navigator.clipboard
+    .writeText(phoneNumber)
+    .then(() => {
+      phoneMessage.textContent = "Phone number copied to clipboard!";
+      phoneMessage.classList.add("success");
+      phoneMessage.classList.remove("error");
+      setTimeout(() => {
+        phoneMessage.textContent = "";
+      }, 2000);
     })
-    .catch((error) => {
-      msg.style.color = "red";
-      msg.innerHTML = `<i class="bi bi-x-square-fill"></i> Message not sent, Please try again`;
-      setTimeout(function () {
-        msg.innerHTML = "";
-      }, 5000);
-      form.reset();
+    .catch((err) => {
+      console.error("Failed to copy phone number: ", err);
+      phoneMessage.textContent = "Failed to copy phone number!";
+      phoneMessage.classList.add("error");
+      phoneMessage.classList.remove("success");
+      setTimeout(() => {
+        phoneMessage.textContent = "";
+      }, 2000);
     });
 });
 
+
+
+// SUBMIT FORM TO GMAIL ADDRESS
+
+  
+// const scriptURL =
+//   "https://script.google.com/macros/s/AKfycbz7mZWJsctvUlMiYi5w4N89063sAozUrc2yqZjNEqrv7MoZAX5moruWHLGHD26N_CXd/exec";
+// const form = document.forms["submit-to-google-sheet"];
+// const msg = document.getElementById("form-message");
+// const errMsg = document.getElementById("err-message")
+
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   fetch(scriptURL, { method: "POST", body: new FormData(form) })
+//     .then((response) => {
+//       errMsg.innerHTML = `<i class="bi bi-check-circle-fill"></i> Message sent successfully!!`;
+//       errMsg.style.color = "green";
+//       setTimeout(function () {
+//         errMsg.innerHTML = "";
+//       }, 5000);
+//       form.reset();
+//     })
+//     .catch((error) => {
+  //       errMsg.style.color = "red";
+  //       errMsg.innerHTML = `<i class="bi bi-x-square-fill"></i> Message not sent, Please try again`;
+//       setTimeout(function () {
+  //         errMsg.innerHTML = "";
+//       }, 5000);
+//       form.reset();
+//     });
+// });
+
 // SPLIDE
+
+// COPYRIGHT DATE
+const copyDate = document.querySelector("small");
+copyDate.innerText = new Date().getFullYear();
