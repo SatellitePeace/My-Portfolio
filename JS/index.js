@@ -114,6 +114,13 @@ lightModeIcon.onclick = () => {
   document.body.classList.toggle("light-mode");
 };
 // CONTACT
+const form = document.getElementById('form');
+
+form.addEventListener('submit', () => {
+  setTimeout(() => {
+    form.reset();
+  }, 500);
+});
 
 // CONTACT END
 // COPY EMAIL

@@ -667,6 +667,12 @@ color: var(--main-color);
 .field-box textarea:focus{
   border-color: var(--main-color);
 }
+.field-box input:valid,
+.field-box textarea:valid {
+  border-color: var(--main-color);
+  background-color: var(--second-color);
+}
+
 .contact-box .btn{
   margin-top: 2rem;
 }
