@@ -70,7 +70,6 @@ img {
   justify-content: center;
   align-items: center;
   z-index: 100;
-  /* overflow-x: hidden; */
 }
 .header.sticky {
   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
@@ -85,8 +84,6 @@ section {
   cursor: default;
   color: var(--text-color);
   gap: 0.5rem;
-  letter-spacing: .15rem;
-  /* margin-right: auto; */
 }
 .logo a{
   color: var(--main-color);
@@ -122,10 +119,6 @@ section {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  /* background-image:  linear-gradient(
-    rgba(31, 36, 45, 0.9), 
-    rgba(50, 57, 70, 0.9)
-  ),url("/assets/images/pexels-rdne-7948048.jpg") */
 }
 .home-content h2 {
   font-size: 2.5rem;
@@ -306,7 +299,6 @@ transform: translateY(0);
   cursor: pointer;
 }
 .skills-btn.active-skill {
-  /* background-color: var(--main-color); */
   border: 0.1rem solid var(--main-color);
   color: var(--main-color);
 }
@@ -359,7 +351,6 @@ transform: translateY(0);
 .skill-item .company {
   position: relative;
   margin-left: 2rem;
-  /* margin-bottom: 0.8rem; */
   padding: 1rem 0 1rem 0;
 }
 .skill-item .company::before {
@@ -491,8 +482,6 @@ transform: translateY(0);
   transform: scale(1.2);
 }
 .product .portfolio-layer {
-  /* padding: 1rem .rem 0 1rem; */
-  /* margin-top: 3rem; */
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -593,11 +582,6 @@ transform: translateY(0);
   line-height: 1.3rem;
   letter-spacing: 0.16rem;
 }
-/* .testimonial-details h4{
-  margin-top: auto;
-display: flex;
-flex-direction: column;
-} */
 .testimonial-details .job {
   line-height: 2rem;
 }
@@ -828,25 +812,10 @@ footer a{
   html {
     font-size: 50%;
   }
-  /* .services-container {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .services-container .service-box {
-    min-height: 20rem;
-    max-height: 25rem;
-    padding: 4rem auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  } */
   .skills-container {
     display: grid;
     grid-template-columns: 1fr;
   }
-*/
-
   .skills-container .skill-box {
     min-height: 20rem;
     max-height: 25rem;
@@ -863,6 +832,7 @@ footer a{
     grid-template-columns: 1fr;
    }
 }
+
 @media screen and (max-width: 480px) {
   .skill-item p{
     font-size: 1.6rem;
