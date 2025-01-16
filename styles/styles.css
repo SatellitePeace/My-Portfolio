@@ -327,12 +327,13 @@ transform: translateY(0);
   width: 0.8rem;
 }
 .skill-list::-webkit-scrollbar-thumb {
-  background-color: transparent;
+  /* background-color: transparent; */
+  background-color: var(--main-color);
   border-radius: 1rem;
 }
-.skill-list:hover::-webkit-scrollbar-thumb {
+/* .skill-list:hover::-webkit-scrollbar-thumb {
   background-color: var(--main-color);
-}
+} */
 .skill-item {
   background-color: var(--second-color);
   border-radius: 0.8rem;
@@ -358,7 +359,7 @@ transform: translateY(0);
 .skill-item .company {
   position: relative;
   margin-left: 2rem;
-  margin-bottom: 0.8rem;
+  /* margin-bottom: 0.8rem; */
   padding: 1rem 0 1rem 0;
 }
 .skill-item .company::before {
@@ -450,19 +451,22 @@ transform: translateY(0);
   align-items: center;
 }
 .product .itemBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: var(--bg-color);
   width: 100%;
   min-height: 100%;
   border-radius: 1rem;
   box-shadow: 0 0 1rem rgba(7, 3, 3, 0.2);
+  overflow: hidden;
+  animation: SclAnimation .8s ease;
 }
 .product .itemBox.hide {
   display: none;
 }
-.product .itemBox {
-  /* height: 100%; */
-  overflow: hidden;
-  animation: SclAnimation .8s ease;
+.product .itemBox.hide {
+  display: none;
 }
 @keyframes SclAnimation {
   0%{
@@ -472,9 +476,13 @@ transform: translateY(0);
      transform: scale(1);
   }
  }
+ .itemBox figure {
+ height: 100%;
+ min-width: 100%;
+ }
 .product .itemBox img {
   width: 100%;
-  min-height: 20rem;
+  min-height: 18rem;
   border-radius: 1rem 1rem 0 0;
   object-fit: cover;
   transition: 0.5s ease;
@@ -484,6 +492,7 @@ transform: translateY(0);
 }
 .product .portfolio-layer {
   /* padding: 1rem .rem 0 1rem; */
+  /* margin-top: 3rem; */
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -516,9 +525,6 @@ transform: translateY(0);
   color: var(--text-color);
 }
 /* TESTIMONAILS START */
-/* .testimonials{
-  background-color: red;
-} */
 .testimonial-header {
   padding-bottom: 5rem;
   font-size: 2rem;
@@ -532,10 +538,15 @@ transform: translateY(0);
 .swiper-wrapper {
   padding-bottom: 4rem;
 }
+
 .swiper-slide {
   font-size: 1.5rem;
-  background: darkgreen;
   background-color: var(--second-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  height: max-content;
   width: 80%;
   border-radius: 1rem;
 }
@@ -553,8 +564,12 @@ transform: translateY(0);
 }
 .testimonail-box {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 2.5rem;
   padding-top: 3.5rem;
+  min-height: 43rem;
   width: 100%;
   color: var(--text-color);
 }
@@ -568,7 +583,7 @@ transform: translateY(0);
 .testimonial-details {
   display: flex;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: auto;
   justify-items: center;
 }
 .testimonial-details h4,
@@ -578,6 +593,11 @@ transform: translateY(0);
   line-height: 1.3rem;
   letter-spacing: 0.16rem;
 }
+/* .testimonial-details h4{
+  margin-top: auto;
+display: flex;
+flex-direction: column;
+} */
 .testimonial-details .job {
   line-height: 2rem;
 }
@@ -719,6 +739,9 @@ footer a{
   html {
     font-size: 55%;
   }
+  .testimonail-box{
+    min-height: 43rem;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -731,7 +754,9 @@ footer a{
   .skills {
     padding-bottom: 7rem;
   }
-  
+  .testimonail-box{
+    min-height: 35rem;
+  }
 }
 @media screen and (max-width: 768px) {
   #menu-icon {
@@ -789,8 +814,16 @@ footer a{
   .contact-container{
     grid-template-columns: 1fr;
    }
+   .testimonail-box{
+    min-height: 41rem;
+  }
 }
-/* TOUCH THIS PART TO MAKE 500 SCREEN RESPONSIVE */
+@media screen and (max-width: 639px) {
+  .testimonail-box{
+    min-height: 30rem;
+  }
+}
+
 @media screen and (max-width: 500px) {
   html {
     font-size: 50%;
@@ -812,9 +845,8 @@ footer a{
     display: grid;
     grid-template-columns: 1fr;
   }
-  /* .skill-item p{
-    font-size: 1.6rem;
-  } */
+*/
+
   .skills-container .skill-box {
     min-height: 20rem;
     max-height: 25rem;
@@ -837,6 +869,11 @@ footer a{
   }
 }
 
+@media screen and (max-width: 428px) {
+  .testimonail-box{
+    min-height: 38rem;
+  }
+}
 @media screen and (max-width: 365px) {
   .home-img img {
     width: 90vw;
