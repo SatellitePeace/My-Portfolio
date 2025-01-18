@@ -109,9 +109,22 @@ for (let i = 0; i < list.length; i++) {
 }
 // LIGHTMODE TOGGLE
 const lightModeIcon = document.getElementById("lightMode-icon");
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme === 'dark') {
+  document.body.classList.add('light-mode');
+  lightModeIcon.classList.remove('bi-cloud-moon'); 
+}
+
 lightModeIcon.onclick = () => {
   lightModeIcon.classList.toggle("bi-cloud-moon");
   document.body.classList.toggle("light-mode");
+
+  if (document.body.classList.contains('light-mode')) {
+    localStorage.setItem('theme', 'dark'); 
+  } else {
+    localStorage.setItem('theme', 'light'); 
+  }
 };
 // CONTACT
 const form = document.getElementById('form');
@@ -210,8 +223,6 @@ document.getElementById("copy-phone").addEventListener("click", () => {
 //       form.reset();
 //     });
 // });
-
-// SPLIDE
 
 // COPYRIGHT DATE
 const copyDate = document.querySelector("small");
